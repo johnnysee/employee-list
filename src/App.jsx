@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import { Container, Header } from 'semantic-ui-react'
 
 const App = () => {
   const [employees, setEmployees] = useState([]);
@@ -17,12 +18,15 @@ const App = () => {
     )
   })
   return (
+    <Container>
     <div>
-      <h1 data-testid="header">Employee Management</h1>
+   
+      <Header size="huge" data-testid="header">Employee Management</Header>
       <div data-testid="employee-list">
       {employeeList}
       </div>
     </div>
+    </Container>
   )
 }
 
