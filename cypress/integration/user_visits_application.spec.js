@@ -16,7 +16,7 @@ describe("user visits the application", () => {
       .children()
       .first()
       .find(".name")
-      .should("contain", "Thomas Bluth");
+      .should("contain", "George Bluth");
   });
 
   it("is expected list items to display an image", () => {
