@@ -7,7 +7,7 @@ const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
   
   const fetchData = async () => {
-    const response = await axios.get('https://reqres.in/api/users?per_page=4')
+    const response = await axios.get('https://reqres.in/api/users')
     setEmployees(response.data.data)
   };
 
