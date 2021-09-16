@@ -1,22 +1,20 @@
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import React, { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
-import { Modal } from "semantic-ui-react";
+import { Modal, Image, Header, Button } from "semantic-ui-react";
 
-const EmployeeModal = () => {
+const EmployeeModal = ({id}) => {
   const [open, setOpen] = useState(false);
   const [singleEmployee, setSingleEmployee] = useState({});
 
   const getEmployee = async () => {
     let response = await axios.get(`https://reqres.in/api/users/${id}`);
-    setSingleEmployee;
-    response.data.data;
+    setSingleEmployee(response.data.data);
   };
   useEffect(() => {
-    getEmployee;
+    getEmployee();
   }, []);
 
-  return;
+  return (
   <Modal
     onClose={() => setOpen(false)}
     onOpen={() => setOpen(true)}
@@ -45,7 +43,8 @@ const EmployeeModal = () => {
       <Button color="black">Edit</Button>
       <Button negative>Delete</Button>
     </Modal.Actions>
-  </Modal>;
+  </Modal>
+  );
 };
 
 export default EmployeeModal;
