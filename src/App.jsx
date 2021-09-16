@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import EmployeeList from './components/EmployeeList'
 import { Container, Header } from 'semantic-ui-react'
 
