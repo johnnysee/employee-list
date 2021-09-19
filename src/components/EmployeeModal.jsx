@@ -12,7 +12,7 @@ const EmployeeModal = ({id}) => {
       setSingleEmployee(response.data.data);
     };  
     getEmployee();
-  }, []);
+  }, [getEmployee]);
 
   return (
   <Modal
