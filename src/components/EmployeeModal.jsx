@@ -12,7 +12,7 @@ const EmployeeModal = ({id}) => {
   };
   useEffect(() => {
     getEmployee();
-  }, []);
+  }, [getEmployee]);
 
   return (
   <Modal
