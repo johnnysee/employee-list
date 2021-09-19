@@ -6,13 +6,13 @@ const EmployeeModal = ({id}) => {
   const [open, setOpen] = useState(false);
   const [singleEmployee, setSingleEmployee] = useState({});
 
-  const getEmployee = async () => {
-    let response = await axios.get(`https://reqres.in/api/users/${id}`);
-    setSingleEmployee(response.data.data);
-  };
   useEffect(() => {
+    const getEmployee = async () => {
+      let response = await axios.get(`https://reqres.in/api/users/${id}`);
+      setSingleEmployee(response.data.data);
+    };  
     getEmployee();
-  }, [getEmployee]);
+  }, []);
 
   return (
   <Modal
