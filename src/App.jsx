@@ -6,7 +6,7 @@ const App = () => {
   return (
     <Container>
       <Header size="huge" id="header">
-        Employee list
+        Employee List
       </Header>
       <EmployeeList />
     </Container>

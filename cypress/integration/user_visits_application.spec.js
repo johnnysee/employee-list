@@ -4,7 +4,7 @@ describe("user visits the application", () => {
     cy.visit("/");
   });
   it("is expected to display title", () => {
-    cy.get("#header").should("contain.text", "Employee list");
+    cy.get("#header").should("contain.text", "Employee List");
   });
 
   it("is expected to display 4 employees", () => {
